@@ -9,8 +9,9 @@
 </head>
 
 <body>
+    <div id=drag><img src="drag.png" alt="drag me" style="width: 100%;min-width:200px;"></div>
     <div class="viewport" id="content">
-        <div id="background1"></div>
+        <div id="background"></div>
         <div class="card" style="z-index: 1;top: 30%; left: 30%; display: flexbox">
             <img src="me.jpg" alt="Picture" style="width:50%; min-width:100px; max-width: 200px">
             <div style="display: inline-block;
@@ -19,10 +20,11 @@
             <p>French & German Editor</p>          
             <a href="mailto:janosch.hoefer@gmail.com">janosch.hoefer@gmail.com</a>
             <p style="font-variant: small-caps; font-size: 18px">Arnhem, NL</p>
+            
             </div>
         </div>
 
-        <div class="card" id="restraint" style="top: 39%; left: 36%; padding:2px; justify-content:right;
+        <div class="card" id="restraint" style="top: 39%; left: 36%;  justify-content:right;
         align-items: center;">
             
             <div class="minicard">
@@ -79,14 +81,19 @@
                 </table>
         </div>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script>
     
+    const el = document.getElementById('drag');
       
     $('div[class^="card"]').draggable(
-    {containment: '#content', snap: '#content', scroll:false},{stack: "div"}
+    {containment: '#content', snap: '#content', scroll:false},{stack: "div"},
+    {start: function(){
+    el.style.display = 'none';
+    }}
     );
 
     $('div[class^="card"]').resizable({
@@ -100,4 +107,7 @@
     $('div[class^="minicard"]').draggable(
     {containment: '#restraint', axis:'x', scroll:false},
     {stack: "div"});
+
+    
+    
     </script>
