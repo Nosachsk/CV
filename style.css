@@ -1,0 +1,130 @@
+
+html, body {
+    font-family: monospace;
+    margin: 0;
+    height:100%;
+    overflow:hidden;
+    
+    background: #d9c3a0;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.viewport {
+    
+    position: absolute;
+  
+    
+    width: 95%;
+    height: 95%;
+    background: #d9c3a0;
+    border: 1.5px dotted black;
+    overflow: hidden;
+    
+  
+    
+  }
+
+#background1 {
+  width: 100%;
+    height: 100%;
+    
+    background-image: url('background2.png');
+    opacity: 0.5;
+    
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 0 black;
+    height: 200px;
+    width: 350px;
+    
+    overflow: hidden;
+
+    cursor: move;
+    
+    position:absolute;
+  
+    background-color: rgb(245, 245, 245);
+    padding: 1em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5%;
+     
+    
+
+  }
+
+  .minicard {
+    
+    border: 1px solid black;
+    
+    box-shadow: 1px 1px 2px 0 grey;
+    
+    height: 185px;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+    
+    overflow: hidden;
+
+    cursor: move;
+    
+    position:relative;
+  
+    background-color: rgb(245, 245, 245);
+   
+
+    display: inline-block;
+    
+    
+  
+
+  }
+
+  .wintop {
+    background: grey;
+    margin:0px;
+     
+  
+    text-align:center;
+    position: relative;
+    
+    
+  }
+
+h5 {
+  margin:0px;
+  color: black;
+  background-color: grey;
+}
+
+.hire {
+  font-family: monospace;
+  background-color: rgb(245, 245, 245);
+  font-style:italic;
+  color: rgb(185, 76, 94);
+  margin: 0;
+  border: 1px solid pink;
+  box-shadow: 2px 2px 2px 0 pink;
+  z-index: 0;
+  cursor:pointer;
+
+}
+
+
+
+a {
+  color: black;
+}
+
+tr, td {
+  padding: 15px;
+  
+}

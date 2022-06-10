@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Janosch CV</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+</head>
+
+<body>
+    <div class="viewport" id="content">
+        <div id="background1"></div>
+        <div class="card" style="z-index: 1;top: 30%; left: 30%; display: flexbox">
+            <img src="me.jpg" alt="Picture" style="width:50%; min-width:100px; max-width: 200px">
+            <div style="display: inline-block;
+            word-break: break-word;">
+            <h4><b>Janosch Hoefer</b></h4>
+            <p>French & German Editor</p>          
+            <a href="mailto:janosch.hoefer@gmail.com">janosch.hoefer@gmail.com</a>
+            <p style="font-variant: small-caps; font-size: 18px">Arnhem, NL</p>
+            </div>
+        </div>
+
+        <div class="card" id="restraint" style="top: 39%; left: 36%; padding:2px; justify-content:right;
+        align-items: center;">
+            
+            <div class="minicard">
+                <span class="wintop"><h5>Hobbies</h5></span>
+            
+            <img src="sax.png" alt="Music" style = "width:15%;min-width:50px; max-width: 50px">
+            <p style="font-size:10px"><i>Music</i></p>
+            <img src="pc.png" alt="PC" style = "width:15%;min-width:100px; max-width: 100px">
+            <p style="font-size:10px"><i>Tech stuff</i></p>
+            </div>
+            <div class="minicard">
+                <span class="wintop"><h5>Languages</h5></span>
+                
+                <p>Fluent in English, French and German.</p>
+            </div> 
+            <span style="margin-right:10px">
+            <form  action="mailto:janosch.hoefer@gmail.com">
+                <input class="hire" type="submit" value="Hire me!"/>
+            </form>
+            </span>
+            
+
+               
+        </div>
+
+        <div class="card" style=" top: 36%; left: 34%">
+            <h4>Education</h4>
+            <table>
+            <tr>
+                <td style="text-align: center;">2017 – 2019</td>
+                <td style=" text-align: left;">European Film and Media Studies – University Lumière Lyon
+                    2, Weimar University and Utrecht University.</td>
+            </tr>
+            <tr>
+                    <td style="text-align: center;">2014 – 2017</td>
+                <td style=" text-align: left;">Bachelor in Philosophy – Grenoble Alpes University and Paris Nanterre
+                    University.</td>
+            </tr>
+            </table>
+
+        </div>
+       
+        <div class="card" style="top: 33%; left: 32%">
+            <h4><b>Work experience</b></h4>
+            <table>
+                <tr>
+                    <td style="text-align: center;">December 2020 - now</td>
+                    <td style=" text-align: left;"><b>Podcast Editor</b> for the French and German Market at Gracenote.</td>
+                </tr>
+                <tr>
+                        <td style="text-align: center;">February 2020 - december 2020</td>
+                    <td style=" text-align: left;"><b>Video Editor</b> for the French and German market at Gracenote.</td>
+                </tr>
+                </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+    
+      
+    $('div[class^="card"]').draggable(
+    {containment: '#content', snap: '#content', scroll:false},{stack: "div"}
+    );
+
+    $('div[class^="card"]').resizable({
+        minHeight: 118,
+        minWidth: 200,
+        maxHeight: 300,
+        maxWidth: 600,
+    });
+    $('.ui-resizable').removeClass( "ui-resizable" ); //without this resizing the first div was making the second one move.
+
+    $('div[class^="minicard"]').draggable(
+    {containment: '#restraint', axis:'x', scroll:false},
+    {stack: "div"});
+    </script>
