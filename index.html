@@ -38,8 +38,14 @@
             <div class="minicard">
                 <span class="wintop"><h5>Languages</h5></span>
                 
-                <p>Fluent in English, French and German.</p>
+                <p>Native French and German speaker.</p>
+                <p>Fluent in English.</p>
             </div> 
+            <div class="minicard">
+                <span class="wintop"><h5>Skills</h5></span>
+                <il>Adobe Suite</il>
+                <il>Python</il>
+            </div>
             <span style="margin-right:10px">
             <form  action="mailto:janosch.hoefer@gmail.com">
                 <input class="hire" type="submit" value="Hire me!"/>
@@ -85,29 +91,4 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script>
-    
-    const el = document.getElementById('drag');
-      
-    $('div[class^="card"]').draggable(
-    {containment: '#content', snap: '#content', scroll:false},{stack: "div"},
-    {start: function(){
-    el.style.display = 'none';
-    }}
-    );
-
-    $('div[class^="card"]').resizable({
-        minHeight: 118,
-        minWidth: 200,
-        maxHeight: 300,
-        maxWidth: 600,
-    });
-    $('.ui-resizable').removeClass( "ui-resizable" ); //without this resizing the first div was making the second one move.
-
-    $('div[class^="minicard"]').draggable(
-    {containment: '#restraint', axis:'x', scroll:false},
-    {stack: "div"});
-
-    
-    
-    </script>
+    <script src="app.js"></script>
