@@ -1,51 +1,90 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Janosch CV</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script senctype="text/javascript/" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js
+"></script>
+
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
 </head>
 
 <body>
-    <div id=drag><img src="drag.png" alt="drag me" style="width: 100%;min-width:200px;"></div>
+    <div id=drag><img src="drag.png" alt="drag me" style="width: 100%;min-width:200px;" draggable="false"></div>
     <div class="viewport" id="content">
         <div id="background"></div>
-        <div class="card" style="z-index: 1;top: 30%; left: 30%; display: flexbox">
-            <img src="me.jpg" alt="Picture" style="width:50%; min-width:100px; max-width: 200px">
-            <div style="display: inline-block;
-            word-break: break-word;">
-            <h4><b>Janosch Hoefer</b></h4>
-            <p>French & German Editor</p>          
-            <a href="mailto:janosch.hoefer@gmail.com">janosch.hoefer@gmail.com</a>
-            <p style="font-variant: small-caps; font-size: 18px">Arnhem, NL</p>
+        <div class="card" style="top: 30%; left: 30%; z-index: 1;">
             
+            <img src="me.jpg" alt="Picture" style="width: 100%;">
+            
+            <div class="test" style="display: inline-block;width: 100%; margin: 10% auto;">      
+                <h4><b>Janosch Hoefer</b></h4>
+                <p>French & German Editor</p>          
+                <a href="mailto:janosch.hoefer@gmail.com">janosch.hoefer@gmail.com</a>
+                <p style="font-variant: small-caps; font-size: 18px">Arnhem, NL</p></td>
             </div>
+
+            
         </div>
 
         <div class="card" id="restraint" style="top: 39%; left: 36%;  justify-content:right;
         align-items: center;">
             
             <div class="minicard">
-                <span class="wintop"><h5>Hobbies</h5></span>
-            
+                <div style="display: grid;">
+                    <div style="grid-area: 1/1;"><hr><hr><hr><hr></div>
+                    <div style="grid-area: 1/1/1/1; align-self: center; text-align: center;">
+                        <p style="display: inline; background-color:rgb(245, 245, 245); font-size: 0.90rem; padding-left: 2px;padding-right: 2px; top:-2px; position: relative;">
+                            <b>Hobbies</b>
+                        </p>
+                    </div>
+                </div>
+
+            <div class="minicontent">
             <img src="sax.png" alt="Music" style = "width:15%;min-width:50px; max-width: 50px">
             <p style="font-size:10px"><i>Music</i></p>
             <img src="pc.png" alt="PC" style = "width:15%;min-width:100px; max-width: 100px">
             <p style="font-size:10px"><i>Tech stuff</i></p>
             </div>
+            </div>
+            
             <div class="minicard">
-                <span class="wintop"><h5>Languages</h5></span>
-                
+                <div style="display: grid;">
+                    <div style="grid-area: 1/1;"><hr><hr><hr><hr></div>
+                    <div style="grid-area: 1/1/1/1; align-self: center; text-align: center;">
+                        <p style="display: inline; background-color:rgb(245, 245, 245); font-size: 0.90rem; padding-left: 2px;padding-right: 2px; top:-2px; position: relative;">
+                            <b>Languages</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="minicontent">
                 <p>Native French and German speaker.</p>
                 <p>Fluent in English.</p>
+            </div>
             </div> 
             <div class="minicard">
-                <span class="wintop"><h5>Skills</h5></span>
-                <il>Adobe Suite</il>
-                <il>Python</il>
+                <div style="display: grid;">
+                    <div style="grid-area: 1/1;"><hr><hr><hr><hr></div>
+                    <div style="grid-area: 1/1/1/1; align-self: center; text-align: center;">
+                        <p style="display: inline; background-color:rgb(245, 245, 245); font-size: 0.90rem; padding-left: 2px;padding-right: 2px; top:-2px; position: relative;">
+                            <b>Skills</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="minicontent">
+                <p>Adobe Suite</p>
+                <p>Python</p>
+                <p>HTML/CSS</p>
+                
             </div>
+            </div>
+            
             <span style="margin-right:10px">
             <form  action="mailto:janosch.hoefer@gmail.com">
                 <input class="hire" type="submit" value="Hire me!"/>
@@ -74,6 +113,7 @@
         </div>
        
         <div class="card" style="top: 33%; left: 32%">
+            
             <h4><b>Work experience</b></h4>
             <table>
                 <tr>
@@ -85,10 +125,10 @@
                     <td style=" text-align: left;"><b>Video Editor</b> for the French and German market at Gracenote.</td>
                 </tr>
                 </table>
+            
         </div>
     </div>
     
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    
     <script src="app.js"></script>

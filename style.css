@@ -49,8 +49,11 @@ html, body {
     /* Add shadows to create the "card" effect */
     border: 1px solid black;
     box-shadow: 2px 2px 2px 0 black;
-    height: 35%;
-    width: 30%;
+    height: 40vh;
+    width: 30vw;
+    font-size: 1em;
+    word-wrap: break-word;
+    
     
     overflow: hidden;
 
@@ -65,19 +68,25 @@ html, body {
     flex-direction: row;
     align-items: flex-start;
     gap: 5%;
-     
-    
 
   }
 
+
+  @media screen and (orientation: portrait){
+    .card{
+      height: 20vh;
+      width: 55vw;
+      
+    }
+  }
   .minicard {
     
     border: 1px solid black;
     
     box-shadow: 1px 1px 2px 0 grey;
     
-    height: 185px;
-    width: 100px;
+    height: 95%;
+    width: 50%;
     margin: 0px;
     padding: 0px;
     
@@ -92,21 +101,20 @@ html, body {
 
     display: inline-block;
     
-    
-  
-
   }
 
-  .wintop {
-    background: grey;
-    margin:0px;
-     
-  
-    text-align:center;
-    position: relative;
-    
+  hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin: 0.1em auto;
     
   }
+
+  .minicontent {
+    padding:6px;
+  }
+
 
 h5 {
   margin:0px;
@@ -131,6 +139,7 @@ h5 {
 
 a {
   color: black;
+  font-size:1em;
 }
 
 tr, td {

@@ -9,11 +9,10 @@
     );
 
     $('div[class^="card"]').resizable({
-        minHeight: 118,
-        minWidth: 200,
-        maxHeight: 300,
-        maxWidth: 600,
-    });
+                               
+            
+        });
+
     $('.ui-resizable').removeClass( "ui-resizable" ); //without this resizing the first div was making the second one move.
 
     $('div[class^="minicard"]').draggable(
@@ -21,3 +20,5 @@
     {stack: "div"});
 
     $('div[class^="login"]').draggable();
+
+    
