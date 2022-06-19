@@ -9,7 +9,7 @@
     );
 
     $('div[class^="card"]').resizable({
-                               
+        containment: "#content"                    
             
         });
 
