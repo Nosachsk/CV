@@ -19,6 +19,4 @@
     {containment: '#restraint', axis:'x', scroll:false},
     {stack: "div"});
 
-    $('div[class^="login"]').draggable();
-
     
